@@ -30,11 +30,13 @@ spec-driven
 ## Supported Entry Points
 
 ```text
-AGENTS.md   # Codex / VS Code Codex
-CLAUDE.md   # Claude / Claude Code
+AGENTS.md                         # Codex / VS Code Codex
+CLAUDE.md                         # Claude / Claude Code
+.github/copilot-instructions.md   # VS Code with GitHub Copilot
+.github/prompts/*.prompt.md       # VS Code reusable prompts
 ```
 
-Do not modify unsupported instruction files unless the user explicitly asks.
+Do not modify other instruction files unless the user explicitly asks.
 
 ## Target Structure
 
@@ -49,6 +51,9 @@ CLAUDE.md
 .github/skills/spec-implementation-audit/SKILL.md
 .github/skills/python-architecture/SKILL.md
 .github/skills/python-architecture/references/*.md
+.github/copilot-instructions.md         (optional for VS Code Copilot)
+.github/prompts/requirements-to-design.prompt.md
+.github/prompts/spec-driven.prompt.md
 ```
 
 ## Procedure
@@ -58,7 +63,7 @@ CLAUDE.md
 Check for:
 
 - Root `SPEC.md`.
-- `AGENTS.md` and `CLAUDE.md`.
+- `AGENTS.md`, `CLAUDE.md`, and `.github/copilot-instructions.md`.
 - Existing `.github/skills/` files.
 - Existing project rules that conflict with SDD hard gates.
 
@@ -112,6 +117,8 @@ Each should state:
 - Non-trivial work starts with `requirements-to-design`; implementation starts with `spec-driven` after design approval.
 - Completion requires diff-based SPEC implementation audit.
 
+For VS Code with GitHub Copilot, create `.github/copilot-instructions.md` and prompt files under `.github/prompts/` that point to the canonical `skills/` files instead of duplicating the workflow text.
+
 ### 4. Install Workflow Skills
 
 Install or update:
@@ -131,6 +138,7 @@ Confirm:
 - `AGENTS.md` and `CLAUDE.md` are thin pointers to root `SPEC.md`.
 - All four workflow skills exist under `.github/skills/`.
 - Python architecture references exist.
+- VS Code templates are installed when requested.
 - No unsupported instruction files were modified.
 
 ## Completion Message
