@@ -2,6 +2,16 @@
 
 The canonical skill source is the `skills/` directory. Keep one copy of the skill text there and let each platform point to it.
 
+## One-command Project Install
+
+Run this from the target project root:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.sh | sh -s -- --yes
+```
+
+The installer creates the Codex, VS Code, and Claude Code entry files described below. It preserves existing files unless `--force` is passed.
+
 ## Codex
 
 For repository-local use:

@@ -18,6 +18,24 @@ This bundle provides a two-entry SDD workflow for Python projects.
 
 ## Install Shape
 
+For repository-local setup, run the installer from the target project root:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.sh | sh -s -- --yes
+```
+
+By default, existing files are preserved. To refresh an existing installation:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.sh | sh -s -- --yes --force
+```
+
+For local development of this repository, run:
+
+```sh
+PYTHON_SDD_SOURCE_DIR=/path/to/python-sdd sh /path/to/python-sdd/install.sh --target /path/to/target-project --yes
+```
+
 Keep `skills/` as the canonical source. Copy or reference it from the platform-specific location:
 
 - Codex repository-local: copy `skills/*` to `.github/skills/` and use `templates/AGENTS.md` as root `AGENTS.md`.

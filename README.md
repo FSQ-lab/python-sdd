@@ -9,6 +9,28 @@ The intended daily workflow has two manual entry points:
 
 The `python-architecture` skill is used as an internal rules layer for Python package boundaries, public APIs, architecture level decisions, and SPEC/code audits.
 
+## Install Into A Project
+
+From the root of the Python project that should use this workflow, run:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.sh | sh -s -- --yes
+```
+
+The installer adds repository-local skills and platform entry points:
+
+- `.github/skills/*` for Codex-compatible local skills
+- `AGENTS.md` for Codex and VS Code with Codex
+- `CLAUDE.md` for Claude Code
+- `.github/copilot-instructions.md` and `.github/prompts/*` for GitHub Copilot in VS Code
+- `SPEC.md` if the project does not already have one
+
+Existing files are kept by default. Use `--force` to overwrite installed files:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.sh | sh -s -- --yes --force
+```
+
 ## Platforms
 
 - Codex: use `AGENTS.md` plus repository or personal skills.
