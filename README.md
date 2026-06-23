@@ -11,7 +11,15 @@ The `python-architecture` skill is used as an internal rules layer for Python pa
 
 ## Install Into A Project
 
-From the root of the Python project that should use this workflow, run:
+From the root of the Python project that should use this workflow, run the command for your shell.
+
+Windows PowerShell:
+
+```powershell
+$env:PYTHON_SDD_INSTALL_YES = '1'; irm https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.ps1 | iex; Remove-Item Env:PYTHON_SDD_INSTALL_YES
+```
+
+macOS or Linux:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.sh | sh -s -- --yes
@@ -25,7 +33,15 @@ The installer adds repository-local skills and platform entry points:
 - `.github/copilot-instructions.md` and `.github/prompts/*` for GitHub Copilot in VS Code
 - `SPEC.md` if the project does not already have one
 
-Existing files are kept by default. Use `--force` to overwrite installed files:
+Existing files are kept by default. Use force mode to overwrite installed files.
+
+Windows PowerShell:
+
+```powershell
+$env:PYTHON_SDD_INSTALL_YES = '1'; $env:PYTHON_SDD_INSTALL_FORCE = '1'; irm https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.ps1 | iex; Remove-Item Env:PYTHON_SDD_INSTALL_YES; Remove-Item Env:PYTHON_SDD_INSTALL_FORCE
+```
+
+macOS or Linux:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.sh | sh -s -- --yes --force

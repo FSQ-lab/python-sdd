@@ -18,13 +18,29 @@ This bundle provides a two-entry SDD workflow for Python projects.
 
 ## Install Shape
 
-For repository-local setup, run the installer from the target project root:
+For repository-local setup, run the installer from the target project root.
+
+Windows PowerShell:
+
+```powershell
+$env:PYTHON_SDD_INSTALL_YES = '1'; irm https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.ps1 | iex; Remove-Item Env:PYTHON_SDD_INSTALL_YES
+```
+
+macOS or Linux:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.sh | sh -s -- --yes
 ```
 
 By default, existing files are preserved. To refresh an existing installation:
+
+Windows PowerShell:
+
+```powershell
+$env:PYTHON_SDD_INSTALL_YES = '1'; $env:PYTHON_SDD_INSTALL_FORCE = '1'; irm https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.ps1 | iex; Remove-Item Env:PYTHON_SDD_INSTALL_YES; Remove-Item Env:PYTHON_SDD_INSTALL_FORCE
+```
+
+macOS or Linux:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.sh | sh -s -- --yes --force

@@ -4,7 +4,15 @@ The canonical skill source is the `skills/` directory. Keep one copy of the skil
 
 ## One-command Project Install
 
-Run this from the target project root:
+Run this from the target project root.
+
+Windows PowerShell:
+
+```powershell
+$env:PYTHON_SDD_INSTALL_YES = '1'; irm https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.ps1 | iex; Remove-Item Env:PYTHON_SDD_INSTALL_YES
+```
+
+macOS or Linux:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/FSQ-lab/python-sdd/main/install.sh | sh -s -- --yes
