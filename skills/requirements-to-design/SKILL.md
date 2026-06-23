@@ -21,7 +21,7 @@ Read enough local context before detailed questions:
 - Relevant module `SPEC.md` files, if the affected area is obvious.
 - `AGENTS.md`, `CLAUDE.md`, pyproject metadata, package layout, tests, and recent docs when useful.
 
-If no root `SPEC.md` exists, note that `sdd-init` may be needed before implementation.
+If no root `SPEC.md` exists, note that the target repository should create one before `spec-driven` implementation begins.
 
 ### 2. Check Scope
 

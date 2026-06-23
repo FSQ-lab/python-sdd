@@ -15,7 +15,6 @@ This bundle provides a two-entry SDD workflow for Python projects.
 - `spec-driven`: main orchestrator from SPEC updates through implementation and audit.
 - `python-architecture`: Python package, boundary, and architecture rules used internally by the flow.
 - `spec-implementation-audit`: diff-based SPEC compliance audit.
-- `sdd-init`: bootstrap/migration helper for repositories.
 
 ## Install Shape
 
@@ -26,6 +25,6 @@ Keep `skills/` as the canonical source. Copy or reference it from the platform-s
 - Claude Code: copy `skills/*` to your Claude skills directory and use `templates/CLAUDE.md` as root `CLAUDE.md`.
 - VS Code with Copilot: copy the templates under `templates/vscode/` into `.github/` and `.github/prompts/`.
 
-For repository use, initialize root `SPEC.md`, then keep `AGENTS.md` and `CLAUDE.md` as thin pointers to `SPEC.md`.
+For repository use, create or maintain root `SPEC.md`, then keep `AGENTS.md` and `CLAUDE.md` as thin pointers to `SPEC.md`.
 
 See `docs/platforms.md` for details.

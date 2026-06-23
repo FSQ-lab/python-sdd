@@ -11,12 +11,13 @@ For repository-local use:
 .github/skills/spec-driven/SKILL.md
 .github/skills/spec-implementation-audit/SKILL.md
 .github/skills/python-architecture/SKILL.md
-.github/skills/sdd-init/SKILL.md
 AGENTS.md
 SPEC.md
 ```
 
 Copy `templates/AGENTS.md` to the repository root and copy `skills/*` to `.github/skills/` or to your personal Codex skills directory.
+
+Create root `SPEC.md` if the target repository does not already have one.
 
 Daily use:
 

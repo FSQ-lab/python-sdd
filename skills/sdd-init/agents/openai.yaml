@@ -1,6 +1,0 @@
-interface:
-  display_name: "SDD Init"
-  short_description: "Bootstrap Python SDD workflow"
-  default_prompt: "Use $sdd-init to initialize this Python repository for SPEC-first development."
-policy:
-  allow_implicit_invocation: false
